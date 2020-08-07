@@ -3,10 +3,45 @@
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
 
 The project is split into three parts:
-1. [The Simple Frontend](https://github.com/udacity/cloud-developer/tree/master/course-02/exercises/udacity-c2-frontend)
+1. [The Simple Frontend](https://github.com/vmonrabal/udagram-frontend/tree/master)
 A basic Ionic client web application which consumes the RestAPI Backend. [Covered in the course]
-2. [The RestAPI Backend](https://github.com/udacity/cloud-developer/tree/master/course-02/exercises/udacity-c2-restapi), a Node-Express server which can be deployed to a cloud service. [Covered in the course]
-3. [The Image Filtering Microservice](https://github.com/udacity/cloud-developer/tree/master/course-02/project/image-filter-starter-code), the final project for the course. It is a Node-Express application which runs a simple script to process images. [Your assignment]
+2. [The RestAPI Backend](https://github.com/vmonrabal/udacity-c2-restapi/tree/master), a Node-Express server which can be deployed to a cloud service. [Covered in the course]
+3. [The Image Filtering Microservice](https://github.com/vmonrabal/image-filter-starter-code/tree/master), the final project for the course. It is a Node-Express application which runs a simple script to process images. [Your assignment]
+
+## Project Rubric tasks
+### Engineering Process and Quality
+
+Changes in the below files:
+[server.ts](https://github.com/vmonrabal/image-filter-starter-code/blob/master/src/server.ts)
+[util.ts](https://github.com/vmonrabal/image-filter-starter-code/blob/master/src/util/util.ts)
+
+### Development Server
+#### The project demonstrates the ability to develop using the NodeJS framework
+![npm run dev](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/npm_run_dev.png)
+
+#### The project demonstrates an understanding of RESTFUL design
+![200](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/localhost_200-OK.png)
+
+#### The project demonstrates an understanding of HTTP status codes
+![400](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/localhost_400-BAD-REQUEST.png)
+
+![422](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/localhost_422-UNPROCESSABLE.png)
+
+### Elastic Beanstalk Deployment
+#### The project demonstrates the ability to create functional cloud deployments
+![200](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_200-OK.png)
+
+![200](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB-Rubric_image_200-OK.png)
+
+![400](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_400-BAD-REQUEST.png)
+
+![422](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_422-UNPROCESSABLE.png)
+
+
+#### The project demonstrates an understanding of AWS Elastic Beanstalk’s CLI and Console Dashboard
+![EB Deployment](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_deployment.png)
+
+![EB Dashboard](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_environment.png)
 
 ## Tasks
 
