@@ -12,6 +12,12 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
+  
+  // Root Endpoint
+  // Displays a simple message to the user
+  app.get( "/", async ( req, res ) => {
+    res.send("try GET /filteredimage?image_url={{}}")
+  } );
 
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
   // GET /filteredimage?image_url={{URL}}
@@ -30,11 +36,23 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   /**************************************************************************** */
 
   //! END @TODO1
-  
-  // Root Endpoint
-  // Displays a simple message to the user
-  app.get( "/", async ( req, res ) => {
-    res.send("try GET /filteredimage?image_url={{}}")
+  app.get( "/filteredimage", async ( req, res ) => {
+    let { image_url } = req.query;
+    if(!image_url){
+      return res.status(400).send("image_url is required");
+    }
+
+    try {
+      await filterImageFromURL(image_url).then(function(imgFiltered){
+        console.log(imgFiltered);
+        res.status(200).sendFile(imgFiltered, () => {
+          deleteLocalFiles([imgFiltered]);
+        });
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(422).send("URL is not valid or is not an image");
+    }
   } );
   
 
