@@ -28,6 +28,8 @@ Changes in the below files:
 ![422](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/localhost_422-UNPROCESSABLE.png)
 
 ### Elastic Beanstalk Deployment
+[EB URL endpoint](http://image-filter-app-dev.eu-central-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg)
+
 #### The project demonstrates the ability to create functional cloud deployments
 ![200](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_200-OK.png)
 
@@ -39,6 +41,7 @@ Changes in the below files:
 
 
 #### The project demonstrates an understanding of AWS Elastic Beanstalk’s CLI and Console Dashboard
+
 ![EB Deployment](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_deployment.png)
 
 ![EB Dashboard](https://raw.githubusercontent.com/vmonrabal/image-filter-starter-code/master/deployment_screenshots/EB_environment.png)
